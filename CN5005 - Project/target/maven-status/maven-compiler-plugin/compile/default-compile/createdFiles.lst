@@ -1,0 +1,9 @@
+edu\cn5005\bst\BST.class
+edu\cn5005\relations\RelationEngine.class
+edu\cn5005\bst\Main$Member.class
+edu\cn5005\bst\Main.class
+edu\cn5005\bst\AVL.class
+edu\cn5005\bst\Node.class
+edu\cn5005\cli\MainCLI.class
+edu\cn5005\persons\Person.class
+edu\cn5005\persons\PersonParser.class

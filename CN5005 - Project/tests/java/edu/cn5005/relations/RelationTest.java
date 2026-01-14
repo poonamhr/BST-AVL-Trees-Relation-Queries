@@ -22,6 +22,26 @@ public class RelationTest {
     }
 
     @Test
+    public void testMotherRelation() throws IOException {
+        PersonParser parser = new PersonParser();
+        parser.loadCsv("persons.csv");
+        RelationEngine engine = new RelationEngine(parser.getPersonsToId(), parser.getIdToName());
+
+        // From CSV: Αναστασία (2) is mother of Ιωάννης (3)
+        assertTrue(engine.isMother(2, 3));
+    }
+
+    @Test
+    public void testSamePersonSibling() throws IOException {
+        PersonParser parser = new PersonParser();
+        parser.loadCsv("persons.csv");
+        RelationEngine engine = new RelationEngine(parser.getPersonsToId(), parser.getIdToName());
+
+        // Same person should not be sibling of itself
+        assertFalse(engine.isSibling(3, 3));
+    }
+
+    @Test
     public void testSiblingRelation() throws IOException {
         PersonParser parser = new PersonParser();
         parser.loadCsv("persons.csv");
@@ -41,6 +61,25 @@ public class RelationTest {
         assertTrue(engine.isGrandparent(1, 6));
     }
 
+    @Test
+    public void testGrandchildRelation() throws IOException {
+        PersonParser parser = new PersonParser();
+        parser.loadCsv("persons.csv");
+        RelationEngine engine = new RelationEngine(parser.getPersonsToId(), parser.getIdToName());
+
+        // From CSV: Αλέξανδρος (6) is grandchild of Αυγουστίνος (1)
+        assertTrue(engine.isGrandchild(6, 1));
+    }
+
+    @Test
+    public void testFirstCousinRelation() throws IOException {
+        PersonParser parser = new PersonParser();
+        parser.loadCsv("persons.csv");
+        RelationEngine engine = new RelationEngine(parser.getPersonsToId(), parser.getIdToName());
+
+        // From CSV: Αλέξανδρος (6) and cousin
+        assertTrue(engine.isFirstCousin(6, 7));
+    }
 
     // Part E
     @Test
@@ -67,4 +106,5 @@ public class RelationTest {
         assertFalse(engine.isSpouse(3, 5));
     }
 }
+
 

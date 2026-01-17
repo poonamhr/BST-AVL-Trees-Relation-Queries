@@ -55,7 +55,6 @@ CN5005-Project/
 │       └── RelationEngine.java
 │
 └── tests/main/java/edu/cn5005/
-    └── edu/cn5005/
         ├── bst/BSTTest.java
         ├── persons/ParserTest.java
         └── relations/RelationTest.java

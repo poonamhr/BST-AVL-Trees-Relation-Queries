@@ -55,7 +55,6 @@ CN5005-Project/
 │       └── RelationEngine.java
 │
 └── tests/main/java/edu/cn5005/
-    └── edu/cn5005/
         ├── bst/BSTTest.java
         ├── persons/ParserTest.java
         └── relations/RelationTest.java
@@ -475,6 +474,7 @@ java -jar target/cn5005-coursework-1.0-SNAPSHOT.jar relation "Ιωάννης Κ�
 * **Μέρος D.5 (relation, CLI):** θωμάς Σιάμος, Poonam Rani Kaur
 * **Μέρος E (σύνθετες σχέσεις):** Poonam Rani Kaur, θωμάς Σιάμος
 * **Μέρος F (Unit Tests):** Poonam Rani Kaur, θωμάς Σιάμος
+
 
 
 
